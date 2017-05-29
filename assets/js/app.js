@@ -18,16 +18,16 @@ function moverDerecha(){
         $("#carrousel div:first").insertAfter("#carrousel div:last");
         carrousel.css("margin-left", '-'+100+'%'); //para que siempre muestre la siguiente
     });  //animate-metodo de animacion 
-}
+};
 
 function moverIzquierda(){
     carrousel.animate({
         marginLeft: 0
     } ,500, function(){
         $("#carrousel div:last").insertBefore("#carrousel div:first");
-        carrousel.css("margin-left", '-'+100+'%'); //para que siempre muestre la siguiente
+        carrousel.css("margin-left", '-'+100+'%'); //para que siempre muestre la siguiente anterior
     });  //animate-metodo de animacion 
-}
+};
 
 next.on("click", function() {
     moverDerecha();
@@ -36,3 +36,24 @@ next.on("click", function() {
 previo.on("click", function() {
     moverIzquierda();
 });
+
+
+//automatico
+
+function autoplay(){
+    interval = setInterval(function(){
+        moverDerecha();
+    }, 5000);
+}
+
+autoplay();
+
+
+
+
+
+
+
+
+
+
