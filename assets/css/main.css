@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #3b3b3b; /* color-gris */
+}
+
+#contenedor-carrousel {
+    margin: auto;
+    width: 85%;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden; /* el contenido que se sale no se muestra */
+    box-shadow: 0 0 0 2px #fff,
+                0 15px 70px #222121;
+}
+
+#carrousel {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 500%;
+}
+
+#carrousel div {
+    width: 100%;
+}
+
+#carrousel img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#btn-prev, #btn-next {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0,0,0, 0.4);
+    position: absolute;
+    top: 50%; /* posion para que siempre este enmedio*/
+    transform: translate(-50%);
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#btn-prev:hover, #btn-next:hover {
+    background-color: rgba(0,0,0, 0.6); 
+}
+
+#btn-prev {
+    left: 30px;
+}
+
+#btn-next {
+    right: -10px;
+}
